@@ -1,10 +1,12 @@
-
+console.log("Got in here")
   
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('shopDataAlpineWrapper', () => ({
-        init(){
-            console.log("Shop controller started.")
-        },
-        products: [0,9,8,9],
+document.addEventListener('alpine:init', () => {
+    console.log("Init alpine!")
+    Alpine.data('dropdown', () => ({
+        open: false,
+
+        toggle() {
+            this.open = ! this.open
+        }
     }))
 })
