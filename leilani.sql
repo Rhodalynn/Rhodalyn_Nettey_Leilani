@@ -42,9 +42,10 @@ create table `products`(
 
 -- Table structure for table `Cart`
 Create table `cart` (
-  `cart_ID` int not null primary key auto_increment,
+  `customer_ID`  int(11) DEFAULT NULL,
   `product_ID` int(11) DEFAULT NULL,
   `quantity` int(11) NOT NULL,
+  foreign key (`customer_ID`) references customer
   foreign key (`product_ID`) references product
     
 );

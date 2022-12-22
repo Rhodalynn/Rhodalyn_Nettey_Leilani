@@ -19,7 +19,7 @@ if (isset($input['getproduct'])) {
 
 //The endpoint for creating new product.
 if (isset($input['createProduct'])) {
-    $categoryData = $input['createProduct'];
+    $productData = $input['createProduct'];
 
     $product_ID = uniqid();
     $product_name = $productNameData['product_name'];

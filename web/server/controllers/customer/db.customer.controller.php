@@ -123,4 +123,17 @@ function editCustomer($customer_ID, $fname, $lname, $contact, $email, $password)
 }
 
 
+function deleteCustomer($customer_ID){
+    global $conn;
+      //Delete customer from database
+      $sql =  "DELETE FROM customer WHERE customer.customer_ID = '$customer_ID' ";
+      
+  
+      if (mysqli_query($conn, $sql)) {
+        return array("success" => true, "data" =>  $customer_ID, "message" => "Customer successfully deleted.");
+      } else {
+        return array("success" => false, "error" => array("message" => "Error: " . $sql . "<br>" . mysqli_error($conn) ));
+  
+  }
 
+}

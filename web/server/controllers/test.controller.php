@@ -1,10 +1,11 @@
 <?php
-include __DIR__ .'/auth/db.auth.controller.php';
-include __DIR__ .'/category/db.category.controller.php';
-include __DIR__ .'/customer/db.customer.controller.php';
-include __DIR__ .'/order/db.order.controller.php';
-include __DIR__ .'/products/db.product.controller.php';
+// include __DIR__ .'/auth/db.auth.controller.php';
+// include __DIR__ .'/category/db.category.controller.php';
+// include __DIR__ .'/customer/db.customer.controller.php';
+// include __DIR__ .'/order/db.order.controller.php';
+//include __DIR__ .'/products/db.product.controller.php';
 //include __DIR__ .'/payment/db.payment.controller.php';
+include __DIR__ .'/cart/db.addToCart.controller.php';
 
 
 //print_r(createCustomer("112","Nadia","Abormegah", "0456745678","nadiaabgh@gmail.com", "564rfg!2"));
@@ -23,5 +24,15 @@ include __DIR__ .'/products/db.product.controller.php';
 
 //print_r(getOneCustomer("112"));
 
-//print_r(createProduct("567", "Swiss Lamp", "Short table lamp for study tables", "Medium", "Black", "120", "lamp.png", "In-stock" ));
+//print_r(createProduct("583", "Bird ornament", "Spice up your table", "Free", "Cream", "1.00", "bird ornament.jpg", "In-stock" ));
+
+//print_r(getAllProducts())
+
+//print_r(addToCart("115", "568", "1"));
+
+//print_r(getCartItems("112"));
+
+//print_r(deleteCartItem("115", "570"));
+
+//print_r( updateCartItemQty("112", "583", "3"));
 ?>
